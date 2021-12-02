@@ -1,4 +1,5 @@
-(ns advent-of-code.day-one)
+(ns advent-of-code.day-one
+ (:require clojure.java.io))
 
 (defn file-lines [fname]
   (with-open [rdr (clojure.java.io/reader fname)]
