@@ -30,7 +30,7 @@
     (map sum3 a)
     (count-increases a)))
 
-(defn day-one
+(defn run
   [& args]
   (println "Day 1A")
   (print "Sample:....")

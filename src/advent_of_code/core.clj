@@ -1,7 +1,7 @@
 (ns advent-of-code.core
   (:gen-class) 
-  (:require [advent-of-code.day-one :as day-one]))
+  (:require [advent-of-code.day-two :as today]))
 
 (defn -main
   [& args]
-  (day-one/day-one args))
+  (today/run args))
