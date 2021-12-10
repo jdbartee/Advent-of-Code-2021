@@ -18,303 +18,501 @@
 clj꞉advent-of-code.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉advent-of-code.core꞉> 
-(in-ns advent-of-code.day-three)
-; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:21:1).
-; advent-of-code.day-three
-clj꞉advent-of-code.core꞉> 
-(in-ns 'advent-of-code.day-three)
-#namespace[advent-of-code.day-three]
-clj꞉advent-of-code.day-three꞉> 
-(starting-state)
-{:total 0, :counts []}
-clj꞉advent-of-code.day-three꞉> 
-(update-in (starting-state) [:counts 0] 1)
-; Execution error (ClassCastException) at advent-of-code.day-three/eval7463 (form-init631407186707133455.clj:31).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉advent-of-code.day-three꞉> 
-(update-in (starting-state) [:total] + 1)
-{:total 1, :counts []}
-clj꞉advent-of-code.day-three꞉> 
-(update-in (starting-state [:counts] cons 1))
-; Execution error (ArityException) at advent-of-code.day-three/eval7467 (form-init631407186707133455.clj:38).
-; Wrong number of args (3) passed to: advent-of-code.day-three/starting-state
-clj꞉advent-of-code.day-three꞉> 
-"1001010"
-"1001010"
-clj꞉advent-of-code.day-three꞉> 
-(map vec "1001010")
-; Error printing return value at clojure.lang.Util/runtimeException (Util.java:221).
-; Unable to convert: class java.lang.Character to Object[]
-clj꞉advent-of-code.day-three꞉> 
-(seq "10010")
-(\1 \0 \0 \1 \0)
-clj꞉advent-of-code.day-three꞉> 
-(map #(Integer/parseInt %) (seq "10010"))
-; Error printing return value (ClassCastException) at advent-of-code.day-three/eval7479$fn (form-init631407186707133455.clj:52).
-; class java.lang.Character cannot be cast to class java.lang.String (java.lang.Character and java.lang.String are in module java.base of loader 'bootstrap')
-clj꞉advent-of-code.day-three꞉> 
-str
-#function[clojure.core/str]
-clj꞉advent-of-code.day-three꞉> 
-(map str (seq "100101"))
-("1" "0" "0" "1" "0" "1")
-clj꞉advent-of-code.day-three꞉> 
-(map #(Integer/parseInt %) (map str (seq "100101")))
-(1 0 0 1 0 1)
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/line->list-of-int
-clj꞉advent-of-code.day-three꞉> 
-(line->list-of-int "100101")
-(1 0 0 1 0 1)
-clj꞉advent-of-code.day-three꞉> 
-(+ [1 1 1] [1 1 1])
-; Execution error (ClassCastException) at advent-of-code.day-three/eval7510 (form-init631407186707133455.clj:70).
-; class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉advent-of-code.day-three꞉> 
-[]
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/line->list-of-int
-clj꞉advent-of-code.day-three꞉> 
-(line->list-of-int "100101")
-[]
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/line->list-of-int
-clj꞉advent-of-code.day-three꞉> 
-(line->list-of-int "100101")
-#function[clojure.core/map/fn--5880]
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/line->list-of-int
-clj꞉advent-of-code.day-three꞉> 
-(line->list-of-int "100101")
-#function[clojure.core/map/fn--5880]
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/line->list-of-int
-clj꞉advent-of-code.day-three꞉> 
-(line->list-of-int "100101")
-; Execution error (ArityException) at advent-of-code.day-three/line->list-of-int (form-init631407186707133455.clj:18).
-; Wrong number of args (0) passed to: clojure.core/vec
-clj꞉advent-of-code.day-three꞉> 
-(vec '(1 2 3))
-[1 2 3]
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/line->list-of-int
-clj꞉advent-of-code.day-three꞉> 
-(line->list-of-int "100101")
-[1 0 0 1 0 1]
-clj꞉advent-of-code.day-three꞉> 
-(mapv + [1 2 3] [1 2 3])
-[2 4 6]
-clj꞉advent-of-code.day-three꞉> 
-(update-in (starting-state) [:total] 10)
-; Execution error (ClassCastException) at advent-of-code.day-three/eval7570 (form-init631407186707133455.clj:108).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉advent-of-code.day-three꞉> 
-(update-in (starting-state) [:total] #(constantly 10))
-; Execution error (ArityException) at advent-of-code.day-three/eval7572 (form-init631407186707133455.clj:112).
-; Wrong number of args (1) passed to: advent-of-code.day-three/eval7572/fn--7573
-clj꞉advent-of-code.day-three꞉> 
-(constantly 10)
-#function[clojure.core/constantly/fn--5689]
-clj꞉advent-of-code.day-three꞉> 
-(constantly 10)
-#function[clojure.core/constantly/fn--5689]
-clj꞉advent-of-code.day-three꞉> 
-(update-in (starting-state [:total] (constantly 10)))
-; Execution error (ArityException) at advent-of-code.day-three/eval7580 (form-init631407186707133455.clj:122).
-; Wrong number of args (2) passed to: advent-of-code.day-three/starting-state
-clj꞉advent-of-code.day-three꞉> 
-(update-in (starting-state) [:total] (constantly 10))
-{:total 10, :counts []}
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/next-state
-clj꞉advent-of-code.day-three꞉> 
-(next-state (starting-state) "10101")
-{:total 1, :counts [1 0 1 0 1]}
-clj꞉advent-of-code.day-three꞉> 
-(next-state (next-state (starting-state "10101")) "01010")
-; Execution error (ArityException) at advent-of-code.day-three/eval7589 (form-init631407186707133455.clj:134).
-; Wrong number of args (1) passed to: advent-of-code.day-three/starting-state
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ArityException) at advent-of-code.day-three/next-state (form-init631407186707133455.clj:26).
-; Wrong number of args (1) passed to: advent-of-code.day-three/next-state/fn--7584
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ArityException) at advent-of-code.day-three/eval7593 (form-init631407186707133455.clj:28).
-; Wrong number of args (1) passed to: advent-of-code.day-three/next-state
-clj꞉advent-of-code.day-three꞉> 
-{:total 1, :counts [1 0 1 0 1]}
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ArityException) at advent-of-code.day-three/next-state (form-init631407186707133455.clj:26).
-; Wrong number of args (1) passed to: advent-of-code.day-three/next-state/fn--7584
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ArityException) at advent-of-code.day-three/next-state (form-init631407186707133455.clj:26).
-; Wrong number of args (1) passed to: advent-of-code.day-three/next-state/fn--7584
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/next-state
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ArityException) at advent-of-code.day-three/next-state (form-init631407186707133455.clj:26).
-; Wrong number of args (1) passed to: advent-of-code.day-three/next-state/fn--7601
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ArityException) at advent-of-code.day-three/next-state (form-init631407186707133455.clj:26).
-; Wrong number of args (1) passed to: advent-of-code.day-three/next-state/fn--7601
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/next-state
-clj꞉advent-of-code.day-three꞉> 
-{:total 0, :counts [1 0 1 0 1]}
-clj꞉advent-of-code.day-three꞉> 
-{:total 0, :counts [1 0 1 0 1]}
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/next-state
-clj꞉advent-of-code.day-three꞉> 
-{:total 2, :counts [2 0 2 0 2]}
-clj꞉advent-of-code.day-three꞉> 
+{:boards [[(1 2 3) (4 5 6)] [(1 2 3) (4 5 6)]]}
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-data
+clj꞉advent-of-code.day-four꞉> 
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards []}
+nil
+clj꞉advent-of-code.day-four꞉> 
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards []}
+nil
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/task-a
+clj꞉advent-of-code.day-four꞉> 
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(
 ; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
-; For input string: " "
-clj꞉advent-of-code.day-three꞉> 
-{:total 2, :counts [1 1 1 1 1]}
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/next-state
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/gamma-rate
-clj꞉advent-of-code.day-three꞉> 
-(true true false false)
-clj꞉advent-of-code.day-three꞉> 
-(true true false false)
-clj꞉advent-of-code.day-three꞉> 
-(true false false false)
-clj꞉advent-of-code.day-three꞉> 
-(true false false false)
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/gamma-rate
-clj꞉advent-of-code.day-three꞉> 
-(false true true true)
-clj꞉advent-of-code.day-three꞉> 
-(false true true true)
-clj꞉advent-of-code.day-three꞉> 
-(false false true true)
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/vec->value
-clj꞉advent-of-code.day-three꞉> 
-{:b 16, :r 5}
-clj꞉advent-of-code.day-three꞉> 
-{:b 16, :r 10}
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/vec->value
-clj꞉advent-of-code.day-three꞉> 
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-data
+clj꞉advent-of-code.day-four꞉> 
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/add-boards-to-data
+clj꞉advent-of-code.day-four꞉> 
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/task-a
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-data
+clj꞉advent-of-code.day-four꞉> 
+(22 13 17 11  0  8  2 23  4 24 21  9 14 16  7  6 10  3 18  5  1 12 20 15 19   3 15  0  2 22  9 18 13 17  5 19  8  7 25 23 20 11 10 24  4 14 21 16 12  6  14 21 17 24  4 10 16 15  9 19 18  8 23 26 20 22 11 13  6  5  2  0 12  3  7)
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-int
+clj꞉advent-of-code.day-four꞉> 
+7
+4
+9
+5
+11
+17
+23
+2
+0
+14
+21
+24
 10
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/gamma-rate
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ClassCastException) at advent-of-code.day-three/vec->value$fn (form-init631407186707133455.clj:36).
-; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/vec->value
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/gamma-rate
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/vec->value
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/gamma-rate
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ClassCastException) at advent-of-code.day-three/vec->value$fn (form-init631407186707133455.clj:31).
-; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/vec->value
-clj꞉advent-of-code.day-three꞉> 
-; Execution error (ClassCastException) at advent-of-code.day-three/vec->value$fn (form-init631407186707133455.clj:31).
-; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/gamma-rate
-clj꞉advent-of-code.day-three꞉> 
+16
+13
+6
+15
+25
 12
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/epsilon-rate
-clj꞉advent-of-code.day-three꞉> 
+22
+18
+20
+8
+19
 3
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/task-a
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/run
-clj꞉advent-of-code.day-three꞉> 
-(nth 2 [0 0 1 0 0])
-; Execution error (ClassCastException) at advent-of-code.day-three/eval7737 (form-init631407186707133455.clj:238).
-; class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉advent-of-code.day-three꞉> 
-(get 2 [0 0 1 0 0])
-nil
-clj꞉advent-of-code.day-three꞉> 
-nil
-clj꞉advent-of-code.day-three꞉> 
-(nth 2 (vector '(0 0 1 0 0)))
-; Execution error (ClassCastException) at advent-of-code.day-three/eval7741 (form-init631407186707133455.clj:247).
-; class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉advent-of-code.day-three꞉> 
-(nth [0 0 1 0 0] 2)
+26
 1
-clj꞉advent-of-code.day-three꞉> 
-(get [0 0 1 0 0] 2)
-1
-clj꞉advent-of-code.day-three꞉> 
-(count [1 2 3])
+(22 13 17 11  0  8  2 23  4 24 21  9 14 16  7  6 10  3 18  5  1 12 20 15 19   3 15  0  2 22  9 18 13 17  5 19  8  7 25 23 20 11 10 24  4 14 21 16 12  6  14 21 17 24  4 10 16 15  9 19 18  8 23 26 20 22 11 13  6  5  2  0 12  3  7)
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(22
+13
+17
+11
+
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+7
+4
+9
+5
+11
+17
+23
+2
+0
+14
+21
+24
+10
+16
+13
+6
+15
+25
+12
+22
+18
+20
+8
+19
 3
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/get-most-common-at
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/index-is-digit
-clj꞉advent-of-code.day-three꞉> 
-(index-is-digit [1 0 0 0] 0 1)
-true
-clj꞉advent-of-code.day-three꞉> 
-(index-is-digit [0 1 1 1] 0 1)
+26
+1
+(22 13 17 11  0  8  2 23  4 24 21  9 14 16  7  6 10  3 18  5  1 12 20 15 19   3 15  0  2 22  9 18 13 17  5 19  8  7 25 23 20 11 10 24  4 14 21 16 12  6  14 21 17 24  4 10 16 15  9 19 18  8 23 26 20 22 11 13  6  5  2  0 12  3  7)
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(22
+13
+17
+11
+
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+7
+4
+9
+5
+11
+17
+23
+2
+0
+14
+21
+24
+10
+16
+13
+6
+15
+25
+12
+22
+18
+20
+8
+19
+3
+26
+1
+(22 13 17 11  0  8  2 23  4 24 21  9 14 16  7  6 10  3 18  5  1 12 20 15 19   3 15  0  2 22  9 18 13 17  5 19  8  7 25 23 20 11 10 24  4 14 21 16 12  6  14 21 17 24  4 10 16 15  9 19 18  8 23 26 20 22 11 13  6  5  2  0 12  3  7)
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(22
+13
+17
+11
+
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+7
+4
+9
+5
+11
+17
+23
+2
+0
+14
+21
+24
+10
+16
+13
+6
+15
+25
+12
+22
+18
+20
+8
+19
+3
+26
+1
+(22 13 17 11  0  8  2 23  4 24 21  9 14 16  7  6 10  3 18  5  1 12 20 15 19   3 15  0  2 22  9 18 13 17  5 19  8  7 25 23 20 11 10 24  4 14 21 16 12  6  14 21 17 24  4 10 16 15  9 19 18  8 23 26 20 22 11 13  6  5  2  0 12  3  7)
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(22
+13
+17
+11
+
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-board
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/add-boards-to-data
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-data
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/task-a
+clj꞉advent-of-code.day-four꞉> 
+7
+4
+9
+5
+11
+17
+23
+2
+0
+14
+21
+24
+10
+16
+13
+6
+15
+25
+12
+22
+18
+20
+8
+19
+3
+26
+1
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(22
+13
+17
+11
+0
+22 13 17 11 0) (
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+7
+4
+9
+5
+11
+17
+23
+2
+0
+14
+21
+24
+10
+16
+13
+6
+15
+25
+12
+22
+18
+20
+8
+19
+3
+26
+1
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(22
+13
+17
+11
+0
+22 13 17 11 0) (
+; Execution error (NumberFormatException) at java.lang.NumberFormatException/forInputString (NumberFormatException.java:67).
+; For input string: ""
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-board
+clj꞉advent-of-code.day-four꞉> 
+7
+4
+9
+5
+11
+17
+23
+2
+0
+14
+21
+24
+10
+16
+13
+6
+15
+25
+12
+22
+18
+20
+8
+19
+3
+26
+1
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(22
+13
+17
+11
+0
+22 13 17 11 0) (8
+2
+23
+4
+24
+8 2 23 4 24) (21
+9
+14
+16
+7
+21 9 14 16 7) (6
+10
+3
+18
+5
+6 10 3 18 5) (1
+12
+20
+15
+19
+1 12 20 15 19)] [(3
+15
+0
+2
+22
+3 15 0 2 22) (9
+18
+13
+17
+5
+9 18 13 17 5) (19
+8
+7
+25
+23
+19 8 7 25 23) (20
+11
+10
+24
+4
+20 11 10 24 4) (14
+21
+16
+12
+6
+14 21 16 12 6)] [(14
+21
+17
+24
+4
+14 21 17 24 4) (10
+16
+15
+9
+19
+10 16 15 9 19) (18
+8
+23
+26
+20
+18 8 23 26 20) (22
+11
+13
+6
+5
+22 11 13 6 5) (2
+0
+12
+3
+7
+2 0 12 3 7)]]}
+nil
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/task-a
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-data
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/add-boards-to-data
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-board
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/add-calls-to-data
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/parse-int
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/starting-data
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/file-lines
+clj꞉advent-of-code.day-four꞉> 
+{:calls [7 4 9 5 11 17 23 2 0 14 21 24 10 16 13 6 15 25 12 22 18 20 8 19 3 26 1], :boards [[(22 13 17 11 0) (8 2 23 4 24) (21 9 14 16 7) (6 10 3 18 5) (1 12 20 15 19)] [(3 15 0 2 22) (9 18 13 17 5) (19 8 7 25 23) (20 11 10 24 4) (14 21 16 12 6)] [(14 21 17 24 4) (10 16 15 9 19) (18 8 23 26 20) (22 11 13 6 5) (2 0 12 3 7)]]}
+nil
+clj꞉advent-of-code.day-four꞉> 
+(or false 2)
+2
+clj꞉advent-of-code.day-four꞉> 
+(or 2 false)
+2
+clj꞉advent-of-code.day-four꞉> 
+(not (or false 2))
 false
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/reduce-oxygen-vecs
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/find-oxygen-value
-clj꞉advent-of-code.day-three꞉> 
-let*
-; Syntax error compiling at (.calva/output-window/output.calva-repl:1:7997).
-; Unable to resolve symbol: let* in this context
-clj꞉advent-of-code.day-three꞉> 
-(get-most-common-at [[1 0 1] [1 0 1] [0 1 0]] 1)
-1
-clj꞉advent-of-code.day-three꞉> 
-(get-most-common-at [[1 0 1] [1 0 1] [0 1 0]] 2)
-0
-clj꞉advent-of-code.day-three꞉> 
-(get-most-common-at [[1 0 1] [1 0 1] [0 1 0]] 0)
-0
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/get-most-common-at
-clj꞉advent-of-code.day-three꞉> 
-(get-most-common-at [[1 0 1] [1 0 1] [0 1 0]] 0)
-1
-clj꞉advent-of-code.day-three꞉> 
-(get-most-common-at [[1 0 1] [1 0 1] [0 1 0]] 1)
-0
-clj꞉advent-of-code.day-three꞉> 
-#'advent-of-code.day-three/reduce-oxygen-vecs
-clj꞉advent-of-code.day-three꞉> 
-(reduce-oxygen-vecs [[1 0 1] [1 0 0] [0 1 0]] 0)
-([1 0 1] [1 0 0])
-clj꞉advent-of-code.day-three꞉> 
-(get [[0] [1]] 0)
-[0]
-clj꞉advent-of-code.day-three꞉> 
-(get '([0] [1]) 0)
+clj꞉advent-of-code.day-four꞉> 
+(or '(false false true))
+(false false true)
+clj꞉advent-of-code.day-four꞉> 
+(apply or '(false false true))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:422:1).
+; Can't take value of a macro: #'clojure.core/or
+clj꞉advent-of-code.day-four꞉> 
+(apply or (vec '(false false true)))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:426:1).
+; Can't take value of a macro: #'clojure.core/or
+clj꞉advent-of-code.day-four꞉> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:426:1).
+; Can't take value of a macro: #'clojure.core/or
+clj꞉advent-of-code.day-four꞉> 
+(some '(false false true))
+; Execution error (ArityException) at advent-of-code.day-four/eval7628 (form-init8918846660314563649.clj:433).
+; Wrong number of args (1) passed to: clojure.core/some
+clj꞉advent-of-code.day-four꞉> 
+(apply some '(false false true))
+; Execution error (ArityException) at advent-of-code.day-four/eval7630 (form-init8918846660314563649.clj:437).
+; Wrong number of args (3) passed to: clojure.core/some
+clj꞉advent-of-code.day-four꞉> 
+; Execution error (ArityException) at advent-of-code.day-four/eval7632 (form-init8918846660314563649.clj:437).
+; Wrong number of args (3) passed to: clojure.core/some
+clj꞉advent-of-code.day-four꞉> 
+(some identity '(false false false))
 nil
-clj꞉advent-of-code.day-three꞉> 
-(get '([0] [1]) 1)
+clj꞉advent-of-code.day-four꞉> 
+(some identity '(false true false))
+true
+clj꞉advent-of-code.day-four꞉> 
+(if nil 1 2)
+2
+clj꞉advent-of-code.day-four꞉> 
+(if true 1 2)
+1
+clj꞉advent-of-code.day-four꞉> 
+(if false 1 2)
+2
+clj꞉advent-of-code.day-four꞉> 
+(if '() 1 2)
+1
+clj꞉advent-of-code.day-four꞉> 
+(some identity '(false false false))
 nil
-clj꞉advent-of-code.day-three꞉> 
-(nth '([0] [1]) 0)
-[0]
-clj꞉advent-of-code.day-three꞉> 
-(if 0 1 0)
-1
-clj꞉advent-of-code.day-three꞉> 
-(if 1 1 0)
-1
-clj꞉advent-of-code.day-three꞉> 
-(if 0 1 0)
-1
-clj꞉advent-of-code.day-three꞉> 
+clj꞉advent-of-code.day-four꞉> 
+(not nil)
+true
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/check-rows
+clj꞉advent-of-code.day-four꞉> 
+(check-rows '((1 2 3) (false false false)))
+nil
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/check-rows
+clj꞉advent-of-code.day-four꞉> 
+(check-rows '((1 2 3) (false false false)))
+; Execution error (ClassCastException) at advent-of-code.day-four/check-rows$fn$fn (form-init8918846660314563649.clj:44).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉advent-of-code.day-four꞉> 
+; Execution error (ClassCastException) at advent-of-code.day-four/check-rows$fn$fn (form-init8918846660314563649.clj:44).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/check-rows
+clj꞉advent-of-code.day-four꞉> 
+; Execution error (ClassCastException) at advent-of-code.day-four/check-rows$fn$fn (form-init8918846660314563649.clj:44).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/check-row
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/check-rows
+clj꞉advent-of-code.day-four꞉> 
+true
+clj꞉advent-of-code.day-four꞉> 
+nil
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/check-rows
+clj꞉advent-of-code.day-four꞉> 
+true
+clj꞉advent-of-code.day-four꞉> 
+false
+clj꞉advent-of-code.day-four꞉> 
+false
+clj꞉advent-of-code.day-four꞉> 
+false
+clj꞉advent-of-code.day-four꞉> 
+true
+clj꞉advent-of-code.day-four꞉> 
+#'advent-of-code.day-four/check-columns
+clj꞉advent-of-code.day-four꞉> 
+true
+clj꞉advent-of-code.day-four꞉> 
+true
+clj꞉advent-of-code.day-four꞉> 
+false
+clj꞉advent-of-code.day-four꞉> 
+(+ 1 false)
+; Execution error (ClassCastException) at advent-of-code.day-four/eval7722 (form-init8918846660314563649.clj:515).
+; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-four꞉> 
