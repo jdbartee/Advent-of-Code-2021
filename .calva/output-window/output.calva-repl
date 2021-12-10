@@ -687,3 +687,19 @@ clj꞉advent-of-code.day-five꞉> 
 (({:x 0, :y 9}) ({:x 9, :y 4}) ({:x 2, :y 2}) ({:x 7, :y 0}) ({:x 0, :y 9}) ({:x 3, :y 4}))
 nil
 clj꞉advent-of-code.day-five꞉> 
+(vec 1 2)
+; Execution error (ArityException) at advent-of-code.day-five/eval7910 (form-init8918846660314563649.clj:690).
+; Wrong number of args (2) passed to: clojure.core/vec
+clj꞉advent-of-code.day-five꞉> 
+(list 1 2)
+(1 2)
+clj꞉advent-of-code.day-five꞉> 
+(map list [1 2 3 4] [1])
+((1 1))
+clj꞉advent-of-code.day-five꞉> 
+(map list [1 2 3] [1 2 3 4 5])
+((1 1) (2 2) (3 3))
+clj꞉advent-of-code.day-five꞉> 
+(map list [1 2 3 4] (repeatedly (constantly 2)))
+((1 2) (2 2) (3 2) (4 2))
+clj꞉advent-of-code.day-five꞉> 

@@ -1,6 +1,5 @@
 (ns advent-of-code.day-five
-  (:require [clojure.java.io :as io]
-            [clojure.string :as string]))
+  (:require [clojure.java.io :as io]))
 
 (defn file-lines [fname]
   (with-open [rdr (io/reader fname)]
@@ -17,47 +16,24 @@
    (= (:x1 line) (:x2 line))
    (= (:y1 line) (:y2 line))))
 
-(defn old-expand-line [line]
-  (let [x1 (:x1 line)
-        x2 (:x2 line)
-        y1 (:y1 line)
-        y2 (:y2 line)]
-    (if (= x1 x2)
-      (if (> y1 y2)
-        (map (fn [i] {:x x1 :y i}) (range y2 (inc y1)))
-        (map (fn [i] {:x x1 :y i}) (range y1 (inc y2))))
-      (if (> x1 x2)
-        (map (fn [i] {:x i :y y1}) (range x2 (inc x1)))
-        (map (fn [i] {:x i :y y1}) (range x1 (inc x2)))))))
-
 (defn my-range [start end]
-  (if (> end start)
-    (range start (inc end))
-    (reverse (range end (inc start)))))
-
-(defn expand-diagonal [line]
-  (let [x1 (:x1 line)
-        x2 (:x2 line)
-        y1 (:y1 line)
-        y2 (:y2 line)]
-    (let [xs (my-range x1 x2)
-          ys (my-range y1 y2)]
-      (map (fn [x y] {:x x :y y}) xs ys))))
+  (cond (= start end)
+        (repeat start)
+        (> start end)
+        (reverse (range end (inc start)))
+        (< start end)
+        (range start (inc end))))
 
 (defn expand-line [line]
-  (if (not (linear? line))
-    (expand-diagonal line)
-    (let [x1 (:x1 line)
-          x2 (:x2 line)
-          y1 (:y1 line)
-          y2 (:y2 line)]
-      (if (= x1 x2)
-        (if (> y1 y2)
-          (map (fn [i] {:x x1 :y i}) (range y2 (inc y1)))
-          (map (fn [i] {:x x1 :y i}) (range y1 (inc y2))))
-        (if (> x1 x2)
-          (map (fn [i] {:x i :y y1}) (range x2 (inc x1)))
-          (map (fn [i] {:x i :y y1}) (range x1 (inc x2))))))))
+  (let [x1 (:x1 line)
+        x2 (:x2 line)
+        y1 (:y1 line)
+        y2 (:y2 line)]
+    (if (and (= x1 x2) (= y1 y2))
+      [{:x x1 :y y1}]
+      (let [xs (my-range x1 x2)
+            ys (my-range y1 y2)]
+        (map (fn [x y] {:x x :y y}) xs ys)))))
 
 (defn task-a [fname]
   (->> (file-lines fname)
