@@ -516,3 +516,174 @@ clj꞉advent-of-code.day-four꞉> 
 ; Execution error (ClassCastException) at advent-of-code.day-four/eval7722 (form-init8918846660314563649.clj:515).
 ; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
 clj꞉advent-of-code.day-four꞉> 
+; Syntax error compiling at (src/advent_of_code/day_five.clj:15:8).
+; Unable to resolve symbol: parse-line in this context
+clj꞉advent-of-code.day-five꞉> 
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/file-lines
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/parse-line (form-init8918846660314563649.clj:9).
+; class java.util.regex.Pattern cannot be cast to class java.util.regex.Matcher (java.util.regex.Pattern and java.util.regex.Matcher are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+([0,9 -> 5,9 0 9 5 9] [8,0 -> 0,8 8 0 0 8] [9,4 -> 3,4 9 4 3 4] [2,2 -> 2,1 2 2 2 1] [7,0 -> 7,4 7 0 7 4] [6,4 -> 2,0 6 4 2 0] [0,9 -> 2,9 0 9 2 9] [3,4 -> 1,4 3 4 1 4] [0,0 -> 8,8 0 0 8 8] [5,5 -> 8,2 5 5 8 2])
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+({:x1 0, :y1 9, :x2 5, :y2 9} {:x1 8, :y1 0, :x2 0, :y2 8} {:x1 9, :y1 4, :x2 3, :y2 4} {:x1 2, :y1 2, :x2 2, :y2 1} {:x1 7, :y1 0, :x2 7, :y2 4} {:x1 6, :y1 4, :x2 2, :y2 0} {:x1 0, :y1 9, :x2 2, :y2 9} {:x1 3, :y1 4, :x2 1, :y2 4} {:x1 0, :y1 0, :x2 8, :y2 8} {:x1 5, :y1 5, :x2 8, :y2 2})
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/linear?
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+({:x1 0, :y1 9, :x2 5, :y2 9} {:x1 9, :y1 4, :x2 3, :y2 4} {:x1 2, :y1 2, :x2 2, :y2 1} {:x1 7, :y1 0, :x2 7, :y2 4} {:x1 0, :y1 9, :x2 2, :y2 9} {:x1 3, :y1 4, :x2 1, :y2 4})
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/expand-line
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/expand-line (form-init8918846660314563649.clj:28).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/parse-line
+clj꞉advent-of-code.day-five꞉> 
+(({:x 0, :y 9} {:x 1, :y 9} {:x 2, :y 9} {:x 3, :y 9} {:x 4, :y 9} {:x 5, :y 9}) ({:x 3, :y 4} {:x 4, :y 4} {:x 5, :y 4} {:x 6, :y 4} {:x 7, :y 4} {:x 8, :y 4} {:x 9, :y 4}) ({:x 2, :y 1} {:x 2, :y 2}) ({:x 7, :y 0} {:x 7, :y 1} {:x 7, :y 2} {:x 7, :y 3} {:x 7, :y 4}) ({:x 0, :y 9} {:x 1, :y 9} {:x 2, :y 9}) ({:x 1, :y 4} {:x 2, :y 4} {:x 3, :y 4}))
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+({:x 0, :y 9} {:x 1, :y 9} {:x 2, :y 9} {:x 3, :y 9} {:x 4, :y 9} {:x 5, :y 9} {:x 3, :y 4} {:x 4, :y 4} {:x 5, :y 4} {:x 6, :y 4} {:x 7, :y 4} {:x 8, :y 4} {:x 9, :y 4} {:x 2, :y 1} {:x 2, :y 2} {:x 7, :y 0} {:x 7, :y 1} {:x 7, :y 2} {:x 7, :y 3} {:x 7, :y 4} {:x 0, :y 9} {:x 1, :y 9} {:x 2, :y 9} {:x 1, :y 4} {:x 2, :y 4} {:x 3, :y 4})
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+{{:x 8, :y 4} 1, {:x 7, :y 2} 1, {:x 1, :y 9} 2, {:x 2, :y 1} 1, {:x 7, :y 4} 2, {:x 4, :y 9} 1, {:x 3, :y 4} 2, {:x 7, :y 0} 1, {:x 5, :y 9} 1, {:x 2, :y 9} 2, {:x 7, :y 1} 1, {:x 6, :y 4} 1, {:x 2, :y 4} 1, {:x 5, :y 4} 1, {:x 3, :y 9} 1, {:x 7, :y 3} 1, {:x 0, :y 9} 2, {:x 2, :y 2} 1, {:x 9, :y 4} 1, {:x 4, :y 4} 1, {:x 1, :y 4} 1}
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+(
+; Execution error (ClassCastException) at advent-of-code.day-five/eval7845 (form-init8918846660314563649.clj:49).
+; class clojure.lang.MapEntry cannot be cast to class java.lang.Number (clojure.lang.MapEntry is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+(1 1 2 1 2 1 2 1 1 2 1 1 1 1 1 1 2 1 1 1 1)
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+5
+nil
+clj꞉advent-of-code.day-five꞉> 
+(range 4 2)
+()
+clj꞉advent-of-code.day-five꞉> 
+(range 4 2 -1)
+(4 3)
+clj꞉advent-of-code.day-five꞉> 
+(range 4 1 -1)
+(4 3 2)
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/my-range
+clj꞉advent-of-code.day-five꞉> 
+(my-range 1 4)
+(1 2 3 4)
+clj꞉advent-of-code.day-five꞉> 
+(my-range 4 1)
+(4 3 2 1)
+clj꞉advent-of-code.day-five꞉> 
+(my-range 1 3)
+(1 2 3)
+clj꞉advent-of-code.day-five꞉> 
+(my-range 2 3)
+(2 3)
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/expand-line
+clj꞉advent-of-code.day-five꞉> 
+1
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/my-range
+clj꞉advent-of-code.day-five꞉> 
+1
+nil
+clj꞉advent-of-code.day-five꞉> 
+0
+nil
+clj꞉advent-of-code.day-five꞉> 
+1
+nil
+clj꞉advent-of-code.day-five꞉> 
+#'advent-of-code.day-five/task-a
+clj꞉advent-of-code.day-five꞉> 
+(({:x 0, :y 9}) ({:x 9, :y 4}) ({:x 2, :y 2}) ({:x 7, :y 0}) ({:x 0, :y 9}) ({:x 3, :y 4}))
+nil
+clj꞉advent-of-code.day-five꞉> 
