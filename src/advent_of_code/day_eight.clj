@@ -1,7 +1,8 @@
 (ns advent-of-code.day-eight
-  (:require [clojure.java.io :as io]
-            [clojure.string :as string]
-            [clojure.set :as set]))
+  (:require
+   [clojure.java.io :as io]
+   [clojure.set :as set]
+   [clojure.string :as string]))
 
 (defn file-lines [fname]
   (with-open [rdr (io/reader fname)]
@@ -15,7 +16,7 @@
 (defn parse-line [line]
   (-> (zipmap [:pre :output]
               (string/split line #"\|"))
-      (update :pre split-strs)
+      (update :pre split-strs)    
       (update :output split-strs)))
 
 (defn matches [s]
@@ -29,6 +30,7 @@
   (->> (:output entry)
        (filter matches)
        (count)))
+  
 
 (defn of-length? [l s]
   (= (count s) l))
@@ -75,6 +77,8 @@
          (map str)
          (apply str)
          (#(Integer/parseInt %)))))
+
+(println "hello")
 
 (defn task-a [fname]
   (->> (file-lines fname)
